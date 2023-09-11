@@ -154,21 +154,13 @@ if (selected == 'Heart Disease Prediction'):
     
     # creating a button for Prediction
     
-    if st.button('Heart Disease Test Result'):
-       
-            f=[[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]]
-            print(f)
-        heart_prediction = heart_disease_model.predict(f)       
-        lc = [str(i) for i in heart_prediction]
-        ans = int("".join(lc))
+   if st.button('Heart Disease Test Result'):
+        heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]])                          
         
-        if (ans == 1):
-            st.error(
+        if (heart_prediction[0] == 1):
           heart_diagnosis = 'The person is having heart disease'
-            )
         else:
-            st.success(
           heart_diagnosis = 'The person does not have any heart disease'
-            )
         
+    st.success(heart_diagnosis)
     
