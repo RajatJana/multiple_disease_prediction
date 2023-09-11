@@ -180,13 +180,20 @@ if (selected == 'Heart Disease Prediction'):
             thal = 1
         if tha == 2:
             thal = 2
-        heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]])                          
+            f=[[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]]
+            print(f)
+        heart_prediction = heart_disease_model.predict(f)       
+        lc = [str(i) for i in heart_prediction]
+        ans = int("".join(lc))
         
-        if (heart_prediction[0] == 1):
+        if (ans == 1):
+            st.error(
           heart_diagnosis = 'The person is having heart disease'
+            )
         else:
+            st.success(
           heart_diagnosis = 'The person does not have any heart disease'
-        
-    st.success(heart_diagnosis)
+            )
+    run()
         
     
