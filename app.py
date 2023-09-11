@@ -94,7 +94,7 @@ if (selected == 'Diabetes Prediction'):
 
 
 
-def run():
+
 # Heart Disease Prediction Page
 if (selected == 'Heart Disease Prediction'):
     
@@ -194,6 +194,5 @@ if (selected == 'Heart Disease Prediction'):
             st.success(
           heart_diagnosis = 'The person does not have any heart disease'
             )
-    run()
         
     
