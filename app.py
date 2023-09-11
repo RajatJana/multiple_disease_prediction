@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 """
 Created on Tue Sep 12 01:32:30 2023
@@ -111,14 +112,10 @@ if (selected == 'Heart Disease Prediction'):
         age = st.text_input('Age')
         
     with col2:
-        se_display = ('Female','Male')
-        se_options = list(range(len(se_display)))
-        se = st.selectbox("Sex",se_options, format_func=lambda x: se_display[x])
+       sex = st.text_input('Sex(0:Female 1:Male)')
         
     with col3:
-        cp_display = ('typical angina','atypical angina','non-anginal pain','asymptomatic')
-        cp_options = list(range(len(cp_display)))
-        cp = st.selectbox("Chest Pain types",cp_options, format_func=lambda x: cp_display[x])
+        cp = st.text_input('Chest Pain types(0:typical angina',1:'atypical angina',2:'non-anginal pain',3:'asymptomatic')')
         
     with col1:
         trestbps = st.text_input('Resting Blood Pressure')
@@ -127,38 +124,28 @@ if (selected == 'Heart Disease Prediction'):
         chol = st.text_input('Serum Cholestoral in mg/dl')
         
     with col3:
-        fbs_display = ('False','True')
-        fbs_options = list(range(len(fbs_display)))
-        fbs = st.selectbox("Fasting Blood Sugar > 120 mg/dl",fbs_options, format_func=lambda x: fbs_display[x])
+        fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl(0:False 1:True)')
         
     with col1:
-        restecg_display = ('0','1','2')
-        restecg_options = list(range(len(restecg_display)))
-        restecg = st.selectbox("Resting Electrocardiographic results",restecg_options, format_func=lambda x: restecg_display[x])
+      restecg = st.text_input('Resting Electrocardiographic results(0,1,2)')
         
     with col2:
         thalach = st.text_input('Maximum Heart Rate achieved')
         
     with col3:
-        exang_display = ('No','Yes')
-        exang_options = list(range(len(exang_display)))
-        exang = st.selectbox("Exercise Induced Angina",exang_options, format_func=lambda x: exang_display[x])
+       exang = st.text_input('Exercise Induced Angina(0:No 1:Yes)')
         
     with col1:
         oldpeak = st.text_input('ST depression induced by exercise')
         
     with col2:
-        slope_display = ('up sloping','flat','down sloping')
-        slope_options = list(range(len(slope_display)))
-        slope = st.selectbox("Slope of the peak exercise ST segment",slope_options, format_func=lambda x: slope_display[x])
+        slope = st.text_input('Slope of the peak exercise ST segment(0:'up sloping',1:'flat',2:'down sloping')')
         
     with col3:
         ca = st.text_input('Major vessels colored by flourosopy')
         
     with col1:
-        tha_display = ('normal','fixed defect','reversable defect')
-        tha_options = list(range(len(tha_display)))
-        tha = st.selectbox("Major vessels colored by flourosopy",tha_options, format_func=lambda x: tha_display[x])
+        thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
         
      
      
@@ -168,18 +155,7 @@ if (selected == 'Heart Disease Prediction'):
     # creating a button for Prediction
     
     if st.button('Heart Disease Test Result'):
-        sex = 0
-        if se == 0:
-            sex = 0
-        if se == 1:
-            sex = 1
-        thal = 0
-        if tha == 0:
-            thal = 0
-        if tha == 1:
-            thal = 1
-        if tha == 2:
-            thal = 2
+       
             f=[[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]]
             print(f)
         heart_prediction = heart_disease_model.predict(f)       
