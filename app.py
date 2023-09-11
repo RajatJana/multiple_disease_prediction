@@ -111,9 +111,9 @@ if (selected == 'Heart Disease Prediction'):
         age = st.text_input('Age')
         
     with col2:
-        sex_display = ('Female','Male')
-        sex_options = list(range(len(sex_display)))
-        sex = st.selectbox("Sex",sex_options, format_func=lambda x: sex_display[x])
+        se_display = ('Female','Male')
+        se_options = list(range(len(se_display)))
+        se = st.selectbox("Sex",se_options, format_func=lambda x: se_display[x])
         
     with col3:
         cp_display = ('typical angina','atypical angina','non-anginal pain','asymptomatic')
@@ -168,6 +168,11 @@ if (selected == 'Heart Disease Prediction'):
     # creating a button for Prediction
     
     if st.button('Heart Disease Test Result'):
+        sex = 0
+        if se == 0:
+            sex = 0
+        if se == 1:
+            sex = 1
         thal = 0
         if tha == 0:
             thal = 0
