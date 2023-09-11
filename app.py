@@ -94,7 +94,7 @@ if (selected == 'Diabetes Prediction'):
 
 
 
-
+def run():
 # Heart Disease Prediction Page
 if (selected == 'Heart Disease Prediction'):
     
