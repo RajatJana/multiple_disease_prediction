@@ -4,7 +4,7 @@ Created on Tue Sep 12 01:32:30 2023
 
 @author: RAJAT JANA
 """
-
+import sklearn
 import pickle
 import streamlit as st
 from PIL import Image
