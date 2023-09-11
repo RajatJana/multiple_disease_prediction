@@ -115,7 +115,7 @@ if (selected == 'Heart Disease Prediction'):
        sex = st.text_input('Sex(0:Female 1:Male)')
         
     with col3:
-        cp = st.text_input('Chest Pain types(0:typical angina',1:'atypical angina',2:'non-anginal pain',3:'asymptomatic')')
+        cp = st.text_input('Chest Pain types(0:'typical angina',1:'atypical angina',2:'non-anginal pain',3:'asymptomatic')')
         
     with col1:
         trestbps = st.text_input('Resting Blood Pressure')
