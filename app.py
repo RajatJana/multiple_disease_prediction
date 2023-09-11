@@ -162,5 +162,5 @@ if (selected == 'Heart Disease Prediction'):
         else:
           heart_diagnosis = 'The person does not have any heart disease'
         
-     st.success(heart_diagnosis)
+    st.success(heart_diagnosis)
     
