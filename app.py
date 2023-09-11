@@ -99,10 +99,6 @@ if (selected == 'Diabetes Prediction'):
 # Heart Disease Prediction Page
 if (selected == 'Heart Disease Prediction'):
     
-    img2 = Image.open('h_logo.png')
-    img2 = img2.resize((156,145))
-    st.image(img2,use_column_width=False)
-    
     # page title
     st.title('Heart Disease Prediction using ML')
     
@@ -112,10 +108,10 @@ if (selected == 'Heart Disease Prediction'):
         age = st.text_input('Age')
         
     with col2:
-       sex = st.text_input('Sex(0=Female , 1=Male)')
+        sex = st.text_input('Sex')
         
     with col3:
-        cp = st.text_input('Chest Pain types(0=typical angina,1=atypical angina,2=non-anginal pain,3=asymptomatic)')
+        cp = st.text_input('Chest Pain types')
         
     with col1:
         trestbps = st.text_input('Resting Blood Pressure')
@@ -124,28 +120,29 @@ if (selected == 'Heart Disease Prediction'):
         chol = st.text_input('Serum Cholestoral in mg/dl')
         
     with col3:
-        fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl(0=False , 1=True)')
+        fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl')
         
     with col1:
-      restecg = st.text_input('Resting Electrocardiographic results(0,1,2)')
+        restecg = st.text_input('Resting Electrocardiographic results')
         
     with col2:
         thalach = st.text_input('Maximum Heart Rate achieved')
         
     with col3:
-       exang = st.text_input('Exercise Induced Angina(0=No , 1=Yes)')
+        exang = st.text_input('Exercise Induced Angina')
         
     with col1:
         oldpeak = st.text_input('ST depression induced by exercise')
         
     with col2:
-        slope = st.text_input('Slope of the peak exercise ST segment(0=up sloping,1=flat,2=down sloping)')
+        slope = st.text_input('Slope of the peak exercise ST segment')
         
     with col3:
         ca = st.text_input('Major vessels colored by flourosopy')
         
     with col1:
         thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
+        
         
      
      
