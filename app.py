@@ -6,7 +6,6 @@ Created on Tue Sep 12 01:32:30 2023
 """
 
 import pickle
-import sklearn
 import streamlit as st
 from PIL import Image
 from streamlit_option_menu import option_menu
