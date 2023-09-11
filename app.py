@@ -14,9 +14,9 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 
-diabetes_model = pickle.load(open('./models/diabetes_model.sav', 'rb'))
+diabetes_model = pickle.load(open('/models/diabetes_model.sav', 'rb'))
 
-heart_disease_model = pickle.load(open('./models/heart_disease_model.sav','rb'))
+heart_disease_model = pickle.load(open('/models/heart_disease_model.sav','rb'))
 
 
 
@@ -33,7 +33,7 @@ with st.sidebar:
     
 if (selected == 'Home'):
     
-   img0 = Image.open('./images/main.jpg')
+   img0 = Image.open('/images/main.jpg')
    img0 = img0.resize((400,100))
    st.image(img0,use_column_width=True)
    
@@ -99,7 +99,7 @@ if (selected == 'Diabetes Prediction'):
 # Heart Disease Prediction Page
 if (selected == 'Heart Disease Prediction'):
     
-    img2 = Image.open('./images/h_logo.png')
+    img2 = Image.open('/images/h_logo.png')
     img2 = img2.resize((156,145))
     st.image(img2,use_column_width=False)
     
