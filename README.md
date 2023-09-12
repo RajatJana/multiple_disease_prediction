@@ -19,8 +19,10 @@ Heart disease and diabetes are two prevalent and serious health conditions that 
 
 The dataset used for this project contains various features such as age, sex, cholesterol levels, blood pressure, and other relevant health metrics. It is essential to preprocess the data to ensure that it is suitable for machine learning algorithms. Data cleaning, feature engineering, and data splitting are performed to prepare the dataset for training and evaluation.
 
-Kaggle : -https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset
-         -https://www.kaggle.com/datasets/mathchi/diabetes-data-set
+Kaggle : 
+
+- https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset
+- https://www.kaggle.com/datasets/mathchi/diabetes-data-set
 
 ## Methodology
 
