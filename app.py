@@ -153,12 +153,14 @@ if (selected == 'Heart Disease Prediction'):
         slope = st.selectbox("Slope of the peak exercise ST segment",slope_options, format_func=lambda x: slope_display[x])
         
     with col3:
-        ca = st.text_input('Major vessels colored by flourosopy')
+        ca_display = ('0','1','2','3','4')
+        ca_options = list(range(len(ca_display)))
+        ca = st.selectbox("Major vessels colored by flourosopy",ca_options, format_func=lambda x: ca_display[x])
         
     with col1:
         thal_display = ('normal','fixed defect','reversable defect')
         thal_options = list(range(len(thal_display)))
-        thal = st.selectbox("Major vessels colored by flourosopy",thal_options, format_func=lambda x: thal_display[x])
+        thal = st.selectbox("thal",thal_options, format_func=lambda x: thal_display[x])
         
      
      
