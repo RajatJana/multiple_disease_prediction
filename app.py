@@ -1,11 +1,10 @@
-
 # -*- coding: utf-8 -*-
 """
 Created on Tue Sep 12 01:32:30 2023
 
 @author: RAJAT JANA
 """
-import sklearn
+
 import pickle
 import streamlit as st
 from PIL import Image
@@ -14,9 +13,9 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 
-diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
+diabetes_model = pickle.load(open('C:\\Users\\RAJAT JANA\\Desktop\\Project 2\\diabetes_model.sav', 'rb'))
 
-heart_disease_model = pickle.load(open('heart_disease_model.sav','rb'))
+heart_disease_model = pickle.load(open('C:\\Users\\RAJAT JANA\\Desktop\\Project 2\\heart_disease_model.sav','rb'))
 
 
 
@@ -33,7 +32,7 @@ with st.sidebar:
     
 if (selected == 'Home'):
     
-   img0 = Image.open('main.jpg')
+   img0 = Image.open('C:\\Users\\RAJAT JANA\\Desktop\\Project 2\\main.jpg')
    img0 = img0.resize((400,100))
    st.image(img0,use_column_width=True)
    
@@ -42,7 +41,7 @@ if (selected == 'Home'):
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
     
-    img1 = Image.open('d_logo.png')
+    img1 = Image.open('C:\\Users\\RAJAT JANA\\Desktop\\Project 2\\d_logo.png')
     img1 = img1.resize((156,145))
     st.image(img1,use_column_width=False)
     
@@ -99,6 +98,10 @@ if (selected == 'Diabetes Prediction'):
 # Heart Disease Prediction Page
 if (selected == 'Heart Disease Prediction'):
     
+    img2 = Image.open('C:\\Users\\RAJAT JANA\\Desktop\\Project 2\\h_logo.png')
+    img2 = img2.resize((156,145))
+    st.image(img2,use_column_width=False)
+    
     # page title
     st.title('Heart Disease Prediction using ML')
     
@@ -108,10 +111,14 @@ if (selected == 'Heart Disease Prediction'):
         age = st.text_input('Age')
         
     with col2:
-        sex = st.text_input('Sex')
+        sex_display = ('Female','Male')
+        sex_options = list(range(len(sex_display)))
+        sex = st.selectbox("Sex",sex_options, format_func=lambda x: sex_display[x])
         
     with col3:
-        cp = st.text_input('Chest Pain types')
+        cp_display = ('typical angina','atypical angina','non-anginal pain','asymptomatic')
+        cp_options = list(range(len(cp_display)))
+        cp = st.selectbox("Chest Pain types",cp_options, format_func=lambda x: cp_display[x])
         
     with col1:
         trestbps = st.text_input('Resting Blood Pressure')
@@ -120,29 +127,38 @@ if (selected == 'Heart Disease Prediction'):
         chol = st.text_input('Serum Cholestoral in mg/dl')
         
     with col3:
-        fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl')
+        fbs_display = ('False','True')
+        fbs_options = list(range(len(fbs_display)))
+        fbs = st.selectbox("Fasting Blood Sugar > 120 mg/dl",fbs_options, format_func=lambda x: fbs_display[x])
         
     with col1:
-        restecg = st.text_input('Resting Electrocardiographic results')
+        restecg_display = ('0','1','2')
+        restecg_options = list(range(len(restecg_display)))
+        restecg = st.selectbox("Resting Electrocardiographic results",restecg_options, format_func=lambda x: restecg_display[x])
         
     with col2:
         thalach = st.text_input('Maximum Heart Rate achieved')
         
     with col3:
-        exang = st.text_input('Exercise Induced Angina')
+        exang_display = ('No','Yes')
+        exang_options = list(range(len(exang_display)))
+        exang = st.selectbox("Exercise Induced Angina",exang_options, format_func=lambda x: exang_display[x])
         
     with col1:
         oldpeak = st.number_input('ST depression induced by exercise')
         
     with col2:
-        slope = st.text_input('Slope of the peak exercise ST segment')
+        slope_display = ('up sloping','flat','down sloping')
+        slope_options = list(range(len(slope_display)))
+        slope = st.selectbox("Slope of the peak exercise ST segment",slope_options, format_func=lambda x: slope_display[x])
         
     with col3:
         ca = st.text_input('Major vessels colored by flourosopy')
         
     with col1:
-        thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
-        
+        thal_display = ('normal','fixed defect','reversable defect')
+        thal_options = list(range(len(thal_display)))
+        thal = st.selectbox("Major vessels colored by flourosopy",thal_options, format_func=lambda x: thal_display[x])
         
      
      
@@ -152,6 +168,7 @@ if (selected == 'Heart Disease Prediction'):
     # creating a button for Prediction
     
     if st.button('Heart Disease Test Result'):
+       
         heart_prediction = heart_disease_model.predict([[age, sex, cp, trestbps, chol, fbs, restecg,thalach,exang,oldpeak,slope,ca,thal]])                          
         
         if (heart_prediction[0] == 1):
@@ -160,4 +177,3 @@ if (selected == 'Heart Disease Prediction'):
           heart_diagnosis = 'The person does not have any heart disease'
         
     st.success(heart_diagnosis)
-    
