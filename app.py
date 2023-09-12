@@ -18,18 +18,6 @@ diabetes_model = pickle.load(open("./models/diabetes_model.sav", 'rb'))
 heart_disease_model = pickle.load(open("./models/heart_disease_model.sav",'rb'))
 
 
-st.markdown(
-        """
-       <style>
-       [data-testid="stSidebar"][aria-expanded="true"]{
-           min-width: 450px;
-           max-width: 450px;
-       }
-       """,
-        unsafe_allow_html=True,
-    )   
-
-
 # sidebar for navigation
 with st.sidebar:
    
