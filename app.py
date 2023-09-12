@@ -132,7 +132,7 @@ if (selected == 'Heart Disease Prediction'):
         exang = st.text_input('Exercise Induced Angina')
         
     with col1:
-        oldpeak = st.text_input('ST depression induced by exercise')
+        oldpeak = st.number_input('ST depression induced by exercise')
         
     with col2:
         slope = st.text_input('Slope of the peak exercise ST segment')
