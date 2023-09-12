@@ -19,8 +19,8 @@ Heart disease and diabetes are two prevalent and serious health conditions that 
 
 The dataset used for this project contains various features such as age, sex, cholesterol levels, blood pressure, and other relevant health metrics. It is essential to preprocess the data to ensure that it is suitable for machine learning algorithms. Data cleaning, feature engineering, and data splitting are performed to prepare the dataset for training and evaluation.
 
-Kaggle : https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset
-         https://www.kaggle.com/datasets/mathchi/diabetes-data-set
+Kaggle : -https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset
+         -https://www.kaggle.com/datasets/mathchi/diabetes-data-set
 
 ## Methodology
 
@@ -61,3 +61,8 @@ Accuracy : Diabetes : Test data : 77% & Train data : 78%
    
 The project is deployed in Streamlit : https://multiplediseaseprediction-rajatjana.streamlit.app/
 
+![Screenshot (80)](https://github.com/RajatJana/multiple_disease_prediction/assets/75692637/1204910d-b364-4ee7-91a1-5249d2c7f876)
+
+![Screenshot (81)](https://github.com/RajatJana/multiple_disease_prediction/assets/75692637/92829113-331f-4d8b-a210-8a52b606799d)
+
+![Screenshot (82)](https://github.com/RajatJana/multiple_disease_prediction/assets/75692637/02e553aa-6864-449f-bf95-d1d206d6f28e)
