@@ -39,9 +39,9 @@ To run this project, you will need the following dependencies:
  scikit-learn
 
 You can install these dependencies using pip:
-```
-`_ pip install numpy pandas scikit-learn tensorflow matplotlib_`
-```
+`_```
+pip install numpy pandas scikit-learn tensorflow matplotlib
+```_`
 
 ## Results
 ```
