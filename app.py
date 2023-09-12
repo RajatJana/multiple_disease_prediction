@@ -36,7 +36,7 @@ if (selected == 'Home'):
    img0 = img0.resize((400,100))
    st.image(img0,use_column_width=True)
    
-   st.title('Welome to Multiple Disease Prediction System using Machine Learning and Streamlit')    
+   st.title('Welome to Multiple Disease Prediction System using Machine Learning')    
    
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
