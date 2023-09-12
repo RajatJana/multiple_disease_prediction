@@ -13,9 +13,9 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 
-diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
+diabetes_model = pickle.load(open("./models/diabetes_model.sav", 'rb'))
 
-heart_disease_model = pickle.load(open('heart_disease_model.sav','rb'))
+heart_disease_model = pickle.load(open("./models/heart_disease_model.sav",'rb'))
 
 
 
@@ -32,7 +32,7 @@ with st.sidebar:
     
 if (selected == 'Home'):
     
-   img0 = Image.open('main.jpg')
+   img0 = Image.open("./images/main.jpg")
    img0 = img0.resize((400,100))
    st.image(img0,use_column_width=True)
    
