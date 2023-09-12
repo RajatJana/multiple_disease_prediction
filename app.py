@@ -41,7 +41,7 @@ if (selected == 'Home'):
 # Diabetes Prediction Page
 if (selected == 'Diabetes Prediction'):
     
-    img1 = Image.open('d_logo.png')
+    img1 = Image.open("./images/d_logo.png")
     img1 = img1.resize((156,145))
     st.image(img1,use_column_width=False)
     
@@ -98,7 +98,7 @@ if (selected == 'Diabetes Prediction'):
 # Heart Disease Prediction Page
 if (selected == 'Heart Disease Prediction'):
     
-    img2 = Image.open('h_logo.png')
+    img2 = Image.open("./images/h_logo.png")
     img2 = img2.resize((156,145))
     st.image(img2,use_column_width=False)
     
