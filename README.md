@@ -6,11 +6,11 @@
 This project aims to develop a machine learning-based prediction system for heart disease and diabetes. The system uses a dataset of medical records and employs various machine learning algorithms to predict the likelihood of a patient developing heart disease or diabetes based on their health information.
 
 ## Table of Contents
-Introduction
-Data
-Methodology
-Dependencies
-Results
+- Introduction
++ Data
+- Methodology
++ Dependencies
+- Results
 
 ## Introduction
 Heart disease and diabetes are two prevalent and serious health conditions that affect millions of people worldwide. Early detection and prediction of these conditions can significantly improve patient outcomes. This project aims to create a predictive model that can assist in identifying individuals at risk of heart disease and diabetes based on their medical history and health data.
@@ -38,7 +38,7 @@ scikit-learn
 
 You can install these dependencies using pip:
 
-** pip install numpy pandas scikit-learn tensorflow matplotlib
+`_ pip install numpy pandas scikit-learn tensorflow matplotlib_`
 
 
 ## Results
