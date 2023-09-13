@@ -31,7 +31,7 @@ with st.sidebar:
     
 if (selected == 'Home'):
     
-   img0 = Image.open("./images/main.jpg")
+   img0 = Image.open("./images/main.png")
    img0 = img0.resize((400,100))
    st.image(img0,use_column_width=True)
    
